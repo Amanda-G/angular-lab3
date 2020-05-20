@@ -11,10 +11,10 @@ import { UserProfile } from '../interfaces/user-profile';
 })
 export class EditComponent implements OnInit {
   @Output() routed = new EventEmitter<NgForm>();
-  user: UserProfile;
   constructor(private router: Router, private profileService: ProfileService) { }
-
+  user: UserProfile;
   ngOnInit(): void {
+    this.user = this.profileService.getUserProfile()
   }
 
   emitRoutedEvent(form: NgForm): void {
