@@ -1,0 +1,12 @@
+<div class="container">
+    <h3>Use the form below to update your profile.</h3>
+    <form #editProfileForm="ngForm" (ngSubmit)="emitRoutedEvent(editProfileForm)" class="edit-form">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" ngModel>
+        <label for="contact">Contact</label>
+        <input type="text" name="contact" id="contact" ngModel>
+        <label for="bio">Bio</label>
+        <textarea name="bio" id="bio" ngModel></textarea>
+        <button class="update-btn">Update</button>
+    </form>
+</div>
